@@ -1,10 +1,10 @@
-From debian:buster
+FROM debian:buster
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get -y install wget
 RUN apt-get -y install nginx
 RUN apt-get -y install mariadb-server
-RUN apt -y install php7.3 php-fpm php-mysql php-xml 
+RUN apt -y install php7.3 php-fpm php-mysql php-xml php-mbstring
 
 RUN wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-english.tar.gz
 RUN tar -xf phpMyAdmin-latest-english.tar.gz  &&  rm -rf phpMyAdmin-latest-english.tar.gz
